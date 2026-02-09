@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: myacr31044.azurecr.io/webapp
+  tag: dev-19
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 3000
+
+ingress:
+  enabled: false
